@@ -7,7 +7,7 @@ const Schema = mongoose.Schema
 const UserSchema = new Schema({
   account: {
     type: String,
-    minlength: [4, '帳號必須 4 個字以上'],
+    minlength: [2, '帳號必須 2 個字以上'],
     maxlength: [20, '帳號不能超過 20 個字'],
     unique: true,
     required: [true, '帳號不能為空']

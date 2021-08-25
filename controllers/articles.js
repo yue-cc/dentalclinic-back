@@ -12,6 +12,7 @@ export const newArticle = async (req, res) => {
   try {
     const result = await articles.create({
       name: req.body.name,
+      subtitle: req.body.subtitle,
       description: req.body.description,
       image: req.filepath
     })
@@ -74,6 +75,7 @@ export const editArticle = async (req, res) => {
   try {
     const data = {
       name: req.body.name,
+      subtitle: req.body.subtitle,
       description: req.body.description
     }
     if (req.filepath) data.image = req.filepath

@@ -8,6 +8,11 @@ const articleSchema = new Schema({
     required: [true, '請填入文章名稱'],
     minlength: [1, '請填入文章名稱']
   },
+  subtitle: {
+    type: String,
+    required: [true, '請填入文章副標'],
+    minlength: [1, '請填入文章副標']
+  },
   description: {
     type: String,
     required: [true, '請填入文章敘述'],
